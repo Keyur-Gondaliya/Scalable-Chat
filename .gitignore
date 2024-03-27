@@ -36,3 +36,5 @@ yarn-error.log*
 # Misc
 .DS_Store
 *.pem
+step-1 only pub-sub.jpg
+step-2 with kafka and prisma postgres.jpg
