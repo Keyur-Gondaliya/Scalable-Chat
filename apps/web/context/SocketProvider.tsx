@@ -64,7 +64,7 @@ export const SocketProvider: React.FC<SocketProviderProps> = ({ children }) => {
     setMessages((prev) => [...prev, message]);
   }, []);
   useEffect(() => {
-    const _socket = io("http://localhost:8000");
+    const _socket = io(process.env.NEXT_PUBLIC_BASE_URL || "");
     _socket.on("message", onMessageRec);
     _socket.on("postgres_save", (msg: string) => {
       console.log("Messaage Saved in Postgres.");
